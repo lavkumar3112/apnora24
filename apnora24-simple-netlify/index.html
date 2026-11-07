@@ -247,10 +247,24 @@
   <label>What help do you need?<select name="service" required><option value="">Choose a service</option><option>Elderly Care</option><option>Hospital Assistance</option><option>Pet Care</option><option>Personal Assistance</option><option>24×7 Urgent Assistance</option><option>Event Assistance</option><option>Compassion Support</option><option>Driver Assistance</option><option>Security Assistance</option></select></label>
   <label>Anything else we should know?<textarea name="message" rows="3" maxlength="1000" placeholder="Preferred date, time or a few details (optional)"></textarea></label>
   <label class="apnora-consent"><input type="checkbox" name="contactConsent" value="Yes" required><span>I agree that Apnora24 may contact me about this enquiry by phone or WhatsApp.</span></label>
-  <button class="btn btn-gold" type="submit">Submit enquiry <span>→</span></button>
-  <p class="form-hint" id="formHint" role="status" aria-live="polite">Your enquiry will be sent securely through this website. Please don't share sensitive medical or identity details here.</p>
-  <a class="apnora-whatsapp-after" id="whatsappAfterSubmit" hidden target="_blank" rel="noopener noreferrer">Continue on WhatsApp <span>→</span></a>
-</form></section>
+  <div class="form-actions">
+  <button class="btn btn-gold" type="submit">
+    Submit enquiry <span>→</span>
+  </button>
+
+  <button
+    class="btn btn-whatsapp"
+    type="button"
+    id="whatsappEnquiryButton"
+  >
+    Continue on WhatsApp <span>→</span>
+  </button>
+</div>
+
+<p class="form-hint" id="formHint" role="status" aria-live="polite">
+  Choose Submit Enquiry or Continue on WhatsApp to contact us.
+</p>
+ </form></section>
 </main>
 <footer class="footer"><div class="footer-brand"><a class="brand brand-footer" href="#home"><span class="brand-symbol">⌂<b>♥</b></span><span class="brand-name">Apnora<span>24</span><small>CARE THAT FEELS LIKE FAMILY</small></span></a><p>Aapke apno ke liye, apnapan ke saath.</p></div><div><strong>Explore</strong><a href="#services">Our services</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#care-rewards">Care Rewards</a></div><div><strong>Get in touch</strong><a href="#enquiry">Request a callback</a><a href="#why">Why Apnora24</a><a href="#faq">FAQs</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div><div><strong>Service area</strong><span>Delhi NCR</span><small>Coverage is confirmed by locality and availability.</small><small>Business contact and legal details to be added before launch.</small></div><div class="footer-bottom"><span>© <span id="year"></span> Apnora24. All rights reserved.</span><span>Care that feels like family. ♡</span></div></footer>
 

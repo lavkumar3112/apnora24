@@ -16,99 +16,64 @@ if (toggle && nav) {
   }));
 }
 
-// Netlify Forms: static HTML detection + URL-encoded AJAX submission.
+// Netlify Forms: independent enquiry submission
 const enquiryForm = document.getElementById("enquiryForm");
 if (enquiryForm) {
   enquiryForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!enquiryForm.reportValidity()) return;
 
-    const submitButton = enquiryForm.querySelector('button[type="submit"]');
+    const submitButton = enquiryForm.querySelector(
+      'button[type="submit"]'
+    );
     const hint = document.getElementById("formHint");
-    const whatsappLink = document.getElementById("whatsappAfterSubmit");
     const formData = new FormData(enquiryForm);
 
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = "Submitting...";
     }
-    if (whatsappLink) whatsappLink.hidden = true;
-    if (hint) hint.textContent = "Submitting your enquiry. Please wait...";
+
+    if (hint) {
+      hint.textContent = "Submitting your enquiry. Please wait...";
+    }
 
     try {
       const encoded = new URLSearchParams();
       for (const [key, value] of formData.entries()) {
-        if (typeof value === "string") encoded.append(key, value);
+        if (typeof value === "string") {
+          encoded.append(key, value);
+        }
       }
       encoded.set("form-name", enquiryForm.getAttribute("name"));
 
       const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
         body: encoded.toString()
       });
-      if (!response.ok) throw new Error(`Netlify form returned ${response.status}`);
 
-      // Meta Pixel: track successful enquiry submission
-      // Only fires if the visitor accepted marketing cookies.
+      if (!response.ok) {
+        throw new Error(`Netlify form returned ${response.status}`);
+      }
+
+      // Track successful enquiry, only when marketing consent is enabled.
       if (window.fbq && window.apnoraPixelLoaded) {
         window.fbq("track", "Lead");
       }
       enquiryForm.reset();
       if (hint) {
-        hint.textContent = "Thank you! Your enquiry has been received. The Apnora24 team will contact you shortly.";
+        hint.textContent =
+          "Thank you! Your enquiry has been received. The Apnora24 team will contact you shortly.";
         hint.style.color = "#174d3b";
-      }
-
-      // Prepare WhatsApp message using the submitted enquiry details.
-      const number = String(
-        window.APNORA24_CONFIG?.whatsappNumber || ""
-      ).replace(/\D/g, "");
-
-      if (whatsappLink && number.length >= 10) {
-
-        // Read values from FormData captured before the form was reset.
-        const getField = (fieldName) =>
-          String(formData.get(fieldName) || "").trim();
-
-        const customerName = getField("name");
-        const customerPhone = getField("phone");
-        const customerArea = getField("area");
-        const selectedService = getField("service");
-        const additionalDetails = getField("message");
-
-        const message = [
-          "Hello Apnora24, I have submitted an enquiry through your website.",
-          "",
-          "*Enquiry Details*",
-          `Name: ${customerName || "Not provided"}`,
-          `Mobile: ${customerPhone || "Not provided"}`,
-          `Area / PIN code: ${customerArea || "Not provided"}`,
-          `Service Required: ${selectedService || "Not provided"}`,
-          `Additional Details / Preferred Date & Time: ${additionalDetails || "Not provided"}`,
-          "",
-          "Please contact me regarding availability and booking.",
-          "Thank you."
-        ].join("\n");
-
-        whatsappLink.href =
-          `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-
-        whatsappLink.hidden = false;
-        whatsappLink.textContent = "Continue on WhatsApp →";
-
-      } else if (whatsappLink) {
-
-        whatsappLink.hidden = true;
-
-        console.error(
-          "Apnora24 WhatsApp number is missing or invalid in config.js"
-        );
       }
     } catch (error) {
       console.error("Apnora24 enquiry submission failed:", error);
       if (hint) {
-        hint.textContent = "We couldn't submit your enquiry. Please check your internet connection and try again, or contact us on WhatsApp.";
+        hint.textContent =
+          "We couldn't submit your enquiry. Please try again or contact us on WhatsApp.";
         hint.style.color = "#a33b32";
       }
     } finally {
@@ -117,6 +82,58 @@ if (enquiryForm) {
         submitButton.innerHTML = 'Submit enquiry <span>→</span>';
       }
     }
+  });
+}
+
+// WhatsApp enquiry: independent of Netlify submission
+const whatsappEnquiryButton = document.getElementById(
+  "whatsappEnquiryButton"
+);
+
+if (whatsappEnquiryButton && enquiryForm) {
+  whatsappEnquiryButton.addEventListener("click", () => {
+
+    // Validate required form fields.
+    if (!enquiryForm.reportValidity()) return;
+
+    const number = String(
+      window.APNORA24_CONFIG?.whatsappNumber || ""
+    ).replace(/\D/g, "");
+
+    if (number.length < 10) {
+      alert(
+        "WhatsApp contact is not configured. Please contact us using the enquiry form."
+      );
+      console.error("Invalid WhatsApp number in config.js");
+      return;
+    }
+
+    const formData = new FormData(enquiryForm);
+
+    const getField = (fieldName) =>
+      String(formData.get(fieldName) || "").trim();
+
+    const message = [
+      "Hello Apnora24, I would like to enquire about your services.",
+      "",
+      "*Enquiry Details*",
+      `Name: ${getField("name")}`,
+      `Mobile: ${getField("phone")}`,
+      `Area / PIN code: ${getField("area")}`,
+      `Service Required: ${getField("service")}`,
+      `Additional Details / Preferred Date & Time: ${
+        getField("message") || "Not provided"
+      }`,
+      "",
+      "Please contact me regarding availability and booking.",
+      "Thank you."
+    ].join("\n");
+
+    const whatsappUrl =
+      `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp directly. No Netlify submission takes place.
+    window.open(whatsappUrl, "_blank");
   });
 }
 

@@ -163,5 +163,39 @@
     width: calc(100% - 20px);
   }
 }
+/* Enquiry form action buttons */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
 
+.form-actions .btn {
+  flex: 1 1 200px;
+  justify-content: center;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: 1px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+  background: #1eae55;
+  border-color: #1eae55;
+}
+
+@media (max-width: 520px) {
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
 
