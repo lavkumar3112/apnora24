@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apnora24.in/sitemap.xml

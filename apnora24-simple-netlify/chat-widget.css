@@ -1,0 +1,35 @@
+/* Apnora24 chatbot and enquiry-form enhancements. */
+.apnora-honeypot { position:absolute !important; left:-10000px !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+.apnora-consent { display:flex !important; flex-direction:row !important; align-items:flex-start !important; gap:10px !important; font-size:13px !important; line-height:1.5 !important; }
+.apnora-consent input { width:17px !important; min-width:17px !important; height:17px !important; margin:2px 0 0 !important; flex:0 0 17px !important; }
+.apnora-whatsapp-after { display:inline-block; margin-top:12px; color:#174d3b; font-weight:700; text-decoration:underline; }
+.apnora-whatsapp-after[hidden] { display:none !important; }
+.apnora-chat { position:fixed; right:22px; bottom:22px; z-index:9999; font-family:inherit; }
+.apnora-chat-launch { display:inline-flex; align-items:center; justify-content:center; gap:7px; border:0; border-radius:999px; padding:13px 19px; background:#174d3b; color:#fff; box-shadow:0 8px 28px #102d2440; font-family:inherit; font-size:15px; font-weight:700; cursor:pointer; }
+.apnora-chat-launch:hover { background:#103c2d; }
+.apnora-chat-panel { position:absolute; right:0; bottom:66px; width:min(370px, calc(100vw - 28px)); height:min(560px, calc(100dvh - 112px)); min-height:360px; background:#fff; color:#24352e; border:1px solid #d9e2dc; border-radius:18px; box-shadow:0 14px 48px #102d2440; display:flex; flex-direction:column; overflow:hidden; }
+.apnora-chat-panel[hidden] { display:none !important; }
+.apnora-chat-header { display:flex; flex:0 0 auto; align-items:center; justify-content:space-between; gap:12px; padding:15px 17px; background:#174d3b; color:#fff; }
+.apnora-chat-header strong,.apnora-chat-header small { display:block; }
+.apnora-chat-header strong { font-size:15px; }
+.apnora-chat-header small { margin-top:3px; opacity:.85; font-size:12px; }
+.apnora-chat-header button { width:34px; height:34px; border:0; border-radius:8px; background:transparent; color:#fff; font-size:27px; line-height:1; cursor:pointer; }
+.apnora-chat-header button:hover { background:#ffffff20; }
+.apnora-chat-messages { flex:1 1 auto; min-height:0; overflow-y:auto; overscroll-behavior:contain; padding:15px; background:#f7faf8; }
+.apnora-chat-bubble { max-width:92%; padding:10px 12px; margin:0 0 10px; border-radius:13px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.55; }
+.apnora-chat-bubble.bot { background:#e8f1eb; border-bottom-left-radius:4px; }
+.apnora-chat-bubble.user { margin-left:auto; background:#174d3b; color:#fff; border-bottom-right-radius:4px; }
+.apnora-chat-quick { display:flex; flex:0 0 auto; flex-wrap:wrap; gap:6px; padding:9px 12px; border-top:1px solid #edf1ee; background:#fff; }
+.apnora-chat-quick button { border:1px solid #b9cfc1; border-radius:999px; padding:7px 10px; color:#174d3b; background:#fff; font-family:inherit; font-size:11px; font-weight:600; cursor:pointer; }
+.apnora-chat-quick button:hover { background:#edf5ef; }
+.apnora-chat-input { display:flex; flex:0 0 auto; gap:8px; padding:10px 12px; border-top:1px solid #edf1ee; background:#fff; }
+.apnora-chat-input input { flex:1; min-width:0; width:100%; border:1px solid #d6e0d9; border-radius:9px; padding:10px 11px; color:#24352e; background:#fff; font:inherit; font-size:14px; }
+.apnora-chat-input button { width:42px; min-width:42px; border:0; border-radius:9px; background:#174d3b; color:#fff; font-size:17px; cursor:pointer; }
+.apnora-chat-foot { flex:0 0 auto; margin:0; padding:0 12px 10px; color:#68766e; background:#fff; font-size:10px; line-height:1.4; text-align:center; }
+.apnora-chat button:focus-visible,.apnora-chat input:focus-visible { outline:3px solid #d4a94c; outline-offset:2px; }
+@media (max-width:520px) {
+  .apnora-chat { right:12px; bottom:12px; }
+  .apnora-chat-launch { padding:12px 16px; }
+  .apnora-chat-panel { right:-2px; bottom:62px; width:min(370px, calc(100vw - 24px)); height:min(570px, calc(100dvh - 96px)); }
+}
+@media (prefers-reduced-motion: reduce) { .apnora-chat * { scroll-behavior:auto !important; transition:none !important; } }

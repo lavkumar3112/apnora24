@@ -1,0 +1,167 @@
+*{box-sizing:border-box} :root{--green:#174d3b;--deep:#103d30;--gold:#b98a45;--cream:#fbf8ef;--ink:#23372f;--muted:#6f7b72;--line:#e8e2d4}html{scroll-behavior:smooth}body{margin:0;background:#fffdf8;color:var(--ink);font-family:"DM Sans","Noto Sans Devanagari",sans-serif}a{color:inherit;text-decoration:none}.announcement{background:var(--deep);color:#f8f2e6;padding:10px 5%;font-size:11px;display:flex;justify-content:center;gap:12px;align-items:center;letter-spacing:.02em}.announcement span{font-family:"Noto Sans Devanagari";color:#e5c58e}.announcement i{color:#d5ad6d}.announcement a{margin-left:auto;color:#f0d8ae;font-weight:700}.header{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#fffdf8;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(23,77,59,.08)}.brand{display:flex;align-items:center;gap:9px;color:var(--green)}.brand-symbol{font-size:35px;line-height:1;position:relative}.brand-symbol b{font-size:13px;color:var(--gold);position:absolute;left:12px;top:12px}.brand-name{font:800 29px "Playfair Display";letter-spacing:-1.3px;line-height:1}.brand-name>span{font-size:18px;color:var(--gold);vertical-align:top}.brand-name small{display:block;font:700 7px "DM Sans";letter-spacing:.16em;margin-top:5px}.nav{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700}.nav a:not(.nav-cta):hover{color:var(--gold)}.nav-cta{background:var(--green);color:white;padding:13px 19px;border-radius:30px}.nav-cta span{margin-left:7px}.menu-toggle{display:none;border:0;background:none;font-size:25px;color:var(--green)}.hero{background:radial-gradient(ellipse at 85% 15%,#efe7d5 0,transparent 38%),var(--cream);padding:80px 8% 78px;display:grid;grid-template-columns:1.08fr .92fr;gap:6%;align-items:center;overflow:hidden}.location-pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid #ded4bd;border-radius:30px;color:var(--green);font-size:9px;font-weight:800;letter-spacing:.1em;margin-bottom:23px}.location-pill span{color:var(--gold);font-size:15px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.17em;color:var(--gold);margin-bottom:17px}.eyebrow.light{color:#e4c18b}.hero h1,.section h2,.family-copy h2,.enquiry-copy h2,.ncr-section h2{font:800 clamp(47px,5.5vw,72px)/1.07 "Playfair Display";letter-spacing:-2.4px;color:var(--green);margin:0}.hero h1 em,.section h2 em,.family-copy h2 em,.enquiry-copy h2 em,.ncr-section h2 em{font-style:normal;color:var(--gold)}.hero-lead{font-size:15px;line-height:1.85;max-width:510px;color:#5d6a61;margin:23px 0 27px}.hero-actions{display:flex;align-items:center;gap:25px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;border:0;border-radius:35px;padding:15px 24px;font:700 12px "DM Sans";cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px #153d2d20}.btn-primary{background:var(--green);color:white}.btn-primary span,.btn-gold span{font-size:19px}.text-link{font-size:12px;font-weight:700;color:var(--green)}.hero-assurance{display:flex;flex-wrap:wrap;gap:17px;margin-top:29px;color:#66766a;font-size:10px}.hero-assurance span:first-letter{color:var(--gold)}.hero-hindi{font:600 22px "Caveat";color:#9a7844;margin-top:19px}.hero-visual{position:relative;max-width:470px;margin:auto;width:100%}.hero-photo{height:435px;border-radius:47% 47% 18px 18px;overflow:hidden;border:9px solid white;box-shadow:0 25px 60px #324d3820;transform:rotate(1deg)}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 43%}.floating-card{position:absolute;bottom:25px;left:-38px;background:white;padding:14px 18px;border-radius:13px;display:flex;gap:12px;align-items:center;box-shadow:0 12px 35px #153d2d20}.heart{font-size:27px;color:var(--gold)}.floating-card b,.floating-card small{display:block}.floating-card b{font-size:11px;color:var(--green)}.floating-card small{font-size:9px;color:var(--muted);margin-top:4px}.round-stamp{position:absolute;right:-28px;top:20px;width:100px;height:100px;border:1px solid #c6a36b;border-radius:50%;background:#fffdf1;display:grid;place-content:center;text-align:center;color:var(--green);font:700 13px "Playfair Display";transform:rotate(9deg);box-shadow:0 5px 18px #203b2810}.round-stamp small{font:700 6px "DM Sans";letter-spacing:.1em;color:var(--gold);margin-top:4px}.quick-benefits{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 7%;background:white;border-bottom:1px solid var(--line);gap:10px}.quick-benefits div{padding:4px 15px;border-right:1px solid var(--line);text-align:center}.quick-benefits div:last-child{border:0}.quick-benefits b,.quick-benefits span{display:block}.quick-benefits b{font:700 14px "Noto Sans Devanagari";color:var(--green)}.quick-benefits span{font-size:10px;color:var(--muted);margin-top:5px}.section{padding:92px 8%}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:40px}.section h2,.ncr-section h2{font-size:clamp(40px,4.7vw,58px)}.section-heading>p{max-width:370px;color:var(--muted);line-height:1.8;font-size:12px;margin-bottom:5px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service-card{border:1px solid var(--line);border-radius:15px;padding:23px 22px 21px;background:white;min-height:265px;transition:.22s}.service-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #1b4a3512;border-color:#d8c7a8}.service-card.featured{background:#f7f4e9}.service-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.service-icon{font-size:23px;color:var(--gold)}.service-number{font:600 12px "Playfair Display";color:#c8c1b3}.service-card h3{font:700 20px "Playfair Display";color:var(--green);margin:0 0 8px}.service-card p{font-size:11px;line-height:1.65;color:var(--muted);min-height:37px;margin:0 0 11px}.service-card ul{list-style:none;padding:0;margin:0 0 15px}.service-card li{font-size:10px;color:#617065;margin:7px 0}.service-card li:before{content:"✓";color:var(--gold);font-weight:800;margin-right:7px}.service-card a{font-size:10px;font-weight:800;color:var(--green)}.service-card a span{color:var(--gold);margin-left:5px}.section-footnote{font-size:10px;color:#8a9188;margin-top:20px;line-height:1.6}.family-banner{background:var(--green);color:white;padding:75px 8%;display:grid;grid-template-columns:1fr .9fr;gap:9%;align-items:center}.family-copy h2{color:white;font-size:clamp(39px,4.7vw,58px)}.family-copy h2 em{color:#e0bd83}.family-copy>p{font-size:12px;line-height:1.8;color:#d4e0d7;max-width:440px;margin:22px 0}.btn-light{background:#fffdf4;color:var(--green)}.family-points>div{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid #ffffff35}.family-points>div:last-child{border:0}.family-points>b,.family-points>div>b{font:700 20px "Playfair Display";color:#dfbd83}.family-points strong,.family-points small{display:block}.family-points strong{font:700 14px "Playfair Display"}.family-points small{font-size:10px;line-height:1.6;color:#d0ddd3;margin-top:5px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:38px}.steps>div{border-top:1px solid #d9d0bd;padding-top:19px}.steps span{font:700 25px "Playfair Display";color:var(--gold)}.steps h3{font:700 18px "Playfair Display";color:var(--green);margin:12px 0 8px}.steps p{font-size:11px;line-height:1.8;color:var(--muted);max-width:280px}.pricing-section{background:#fffdf8}.pricing-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.price-panel,.fees-panel{border:1px solid var(--line);border-radius:16px;padding:26px;background:white}.price-panel-head{display:flex;align-items:center;justify-content:space-between;font-size:9px;letter-spacing:.14em;font-weight:800;color:var(--green);padding-bottom:14px;border-bottom:1px solid var(--line)}.price-tag{font-size:9px;letter-spacing:0;background:#f4efe2;color:#8c6934;padding:7px 10px;border-radius:20px}.hourly-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}.hourly-row strong,.hourly-row small{display:block}.hourly-row strong{font-size:13px;color:var(--green)}.hourly-row small{font-size:9px;color:var(--muted);margin-top:5px}.price{font:700 25px "Playfair Display";color:var(--green);text-align:right}.price small{font:500 9px "DM Sans";color:var(--muted)}.urgent .price{color:#a56c35}.package-title{margin-top:22px}.package-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:15px}.package{background:#f7f5ed;border-radius:10px;padding:14px 7px;text-align:center}.package.best{background:#eaf0e8;border:1px solid #cbd9cd}.package small,.package span{display:block;font-size:8px;color:var(--muted)}.package strong{display:block;font:700 22px "Playfair Display";color:var(--green);margin:7px 0}.price-note{font-size:9px;line-height:1.6;color:#7b837b;margin:15px 0 0}.fees-panel{background:#f7f5ed}.fees-panel h3{font:700 25px/1.2 "Playfair Display";color:var(--green);margin:0 0 22px}.fee-list{border-top:1px solid #e4ddcf}.fee-list div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #e4ddcf;font-size:11px}.fee-list b{color:var(--green)}.policy-mini{margin-top:18px}.policy-mini strong{font-size:11px;color:var(--green)}.policy-mini p{font-size:10px;line-height:1.7;color:var(--muted);margin:6px 0 0}.pricing-disclaimer{margin-top:16px;background:#f2ecdf;padding:13px 16px;border-radius:9px;color:#726c5e;font-size:9px;line-height:1.7}.ncr-section{background:#f1eee3;padding:65px 8%;display:flex;justify-content:space-between;align-items:center;gap:40px}.ncr-section h2{font-size:clamp(36px,4vw,49px)}.ncr-section p{font-size:11px;line-height:1.8;color:var(--muted);max-width:440px}.area-chips{display:flex;flex-wrap:wrap;gap:9px;max-width:390px}.area-chips span{background:white;border:1px solid #e2d9c8;border-radius:30px;padding:10px 15px;font-size:11px;color:var(--green);font-weight:700}.area-chips small{font-size:9px;color:#7e857b;line-height:1.6;margin-top:8px}.faq-section{background:white}.faq-list{max-width:850px;margin-left:auto}.faq-list details{border-bottom:1px solid var(--line);padding:17px 3px}.faq-list summary{font:700 14px "Playfair Display";color:var(--green);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}.faq-list summary:after{content:"+";font:500 20px "DM Sans";color:var(--gold)}.faq-list details[open] summary:after{content:"−"}.faq-list details p{font-size:11px;line-height:1.8;color:var(--muted);max-width:740px}.enquiry-section{background:var(--green);padding:75px 8%;display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}.enquiry-copy h2{color:white;font-size:clamp(42px,4.8vw,59px)}.enquiry-copy h2 em{color:#dfbd83}.enquiry-copy>p{color:#d5e0d7;line-height:1.8;font-size:12px;max-width:390px}.contact-promise{display:flex;align-items:center;gap:12px;margin-top:25px}.contact-promise>span{font-size:28px;color:#e2c08a}.contact-promise b,.contact-promise small{display:block}.contact-promise b{font:700 14px "Playfair Display"}.contact-promise small{font:500 16px "Caveat";color:#dfbd83;margin-top:3px}.enquiry-form{background:#fffdf8;border-radius:16px;padding:27px}.enquiry-form h3{font:700 24px "Playfair Display";color:var(--green);margin:0}.form-intro{font-size:10px;color:var(--muted);margin:5px 0 19px}.enquiry-form label{display:block;font-size:10px;font-weight:700;color:#506157;margin-bottom:12px}.enquiry-form input,.enquiry-form select,.enquiry-form textarea{display:block;width:100%;margin-top:6px;border:1px solid #e5e0d5;background:white;border-radius:7px;padding:11px;font:11px "DM Sans";color:var(--ink);outline:none}.enquiry-form input:focus,.enquiry-form select:focus,.enquiry-form textarea:focus{border-color:var(--green)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:11px}.btn-gold{background:var(--gold);color:white;width:100%;margin-top:4px}.form-hint{font-size:9px;line-height:1.6;color:#899087;margin-bottom:0}.footer{background:#103d30;color:#e7eee7;padding:48px 8% 18px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:25px}.brand-footer{color:white}.brand-footer .brand-name{font-size:26px}.footer-brand>p{font:500 18px "Caveat";color:#d7bd8d}.footer>div:not(.footer-brand):not(.footer-bottom){display:flex;flex-direction:column;gap:10px;font-size:10px}.footer>div strong{color:#d8bb86;font-size:10px;margin-bottom:4px}.footer a,.footer span,.footer small{color:#d2dfd5}.footer a:hover{color:white}.footer small{font-size:9px;line-height:1.6}.footer-bottom{grid-column:1/-1;border-top:1px solid #ffffff30;padding-top:16px;margin-top:20px;display:flex;justify-content:space-between;color:#b9c9bd;font-size:9px}.footer-bottom span:last-child{color:#d8bb86}@media(max-width:900px){.nav{gap:15px}.hero{padding-top:60px}.hero h1{font-size:56px}.service-grid{grid-template-columns:repeat(2,1fr)}.pricing-layout{grid-template-columns:1fr}.family-banner{gap:5%}}@media(max-width:650px){.announcement{font-size:8px;gap:6px;flex-wrap:wrap}.announcement a{margin-left:0}.header{height:70px;padding:0 20px}.brand-name{font-size:25px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fffdf8;padding:20px 24px;flex-direction:column;align-items:stretch;box-shadow:0 15px 20px #102d2015}.nav.open{display:flex}.nav-cta{text-align:center}.hero{display:flex;flex-direction:column;align-items:stretch;padding:48px 23px 48px;gap:35px}.hero h1{font-size:47px;letter-spacing:-1.8px}.hero-lead{font-size:13px}.hero-assurance{font-size:9px;gap:10px}.hero-visual{width:85%;max-width:350px}.hero-photo{height:340px}.floating-card{left:-22px;bottom:14px;padding:10px 12px}.round-stamp{right:-22px;width:82px;height:82px;font-size:11px}.quick-benefits{grid-template-columns:1fr 1fr;padding:20px 13px;gap:15px}.quick-benefits div{border:0;text-align:left;padding:4px 9px}.quick-benefits b{font-size:12px}.quick-benefits span{font-size:9px}.section{padding:65px 22px}.section-heading{display:block;margin-bottom:28px}.section-heading>p{font-size:11px;margin-top:16px}.section h2{font-size:41px}.service-grid{grid-template-columns:1fr;gap:11px}.service-card{min-height:0;padding:20px}.service-card p{min-height:0}.family-banner{grid-template-columns:1fr;padding:60px 23px;gap:25px}.family-copy h2{font-size:40px}.family-points>div{padding:14px 0}.steps{grid-template-columns:1fr;gap:20px;margin-top:30px}.steps>div{padding-top:13px}.steps h3{margin:8px 0}.package-grid{grid-template-columns:repeat(2,1fr)}.price-panel,.fees-panel{padding:19px}.ncr-section{padding:55px 23px;display:block}.ncr-section h2{font-size:39px}.area-chips{margin-top:23px}.faq-list summary{font-size:12px}.enquiry-section{grid-template-columns:1fr;padding:58px 22px;gap:25px}.enquiry-copy h2{font-size:43px}.enquiry-form{padding:21px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding:40px 22px 18px;grid-template-columns:1fr 1fr;gap:24px}.footer-brand{grid-column:1/-1}.footer-bottom{display:block;line-height:2}.footer-bottom span:last-child{display:block}}
+
+/* Apnora24 Care Rewards */
+.rewards-section { background: #fbf8f0; }
+.rewards-hero {
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  padding:34px 38px; margin:28px 0 22px; border-radius:22px;
+  color:#fff; background:linear-gradient(115deg,#174d3b,#286b50);
+  box-shadow:0 14px 34px rgba(23,77,59,.12);
+}
+.rewards-kicker { display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.14em; color:#e6c77b; }
+.rewards-hero h3 { margin:8px 0; font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.3rem); }
+.rewards-hero h3 strong { color:#f0d38b; }
+.rewards-hero p { max-width:620px; margin:0; color:rgba(255,255,255,.86); }
+.rewards-heart { color:#f0d38b; font-size:6rem; line-height:1; padding:0 18px; }
+.rewards-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.reward-card {
+  padding:25px; border:1px solid #e9e2d3; border-radius:18px; background:#fff;
+  box-shadow:0 8px 24px rgba(35,55,43,.045);
+}
+.reward-card h3 { margin:12px 0 8px; color:#174d3b; font-family:'Playfair Display',serif; font-size:1.25rem; }
+.reward-card p { margin:0 0 12px; color:#5f675f; line-height:1.65; }
+.reward-card ul { margin:12px 0 0; padding-left:19px; color:#5f675f; }
+.reward-card li { margin:8px 0; line-height:1.5; }
+.reward-card li strong { color:#174d3b; }
+.reward-icon { display:inline-grid; place-items:center; width:40px; height:40px; border-radius:50%; background:#f5efdf; color:#98742f; font-size:1.35rem; }
+.reward-offer { margin:5px 0 10px; color:#a17b2e; font-size:1.75rem; font-weight:800; }
+.reward-card small { display:block; color:#7b817a; line-height:1.5; }
+.featured-reward { border:1px solid #d9c58e; background:#fffdf7; }
+.rewards-terms { margin-top:22px; padding:22px 25px; border-radius:16px; background:#f2ecdc; color:#596057; }
+.rewards-terms strong { display:block; margin-bottom:7px; color:#174d3b; }
+.rewards-terms p { margin:0 0 16px; font-size:.9rem; line-height:1.7; }
+@media (max-width:900px) {
+  .rewards-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:600px) {
+  .rewards-hero { padding:26px 22px; }
+  .rewards-heart { font-size:3.5rem; padding:0; }
+  .rewards-grid { grid-template-columns:1fr; }
+  .reward-card { padding:22px; }
+}
+
+
+/* Apnora24 chatbot enhancements */
+
+.apnora-chat-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.apnora-chat-quick button {
+  cursor: pointer;
+  border: 1px solid #d7e4dc;
+  border-radius: 20px;
+  background: #fff;
+  color: #174d3b;
+  padding: 9px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background .2s ease, color .2s ease;
+}
+
+.apnora-chat-quick button:hover,
+.apnora-chat-quick button:focus-visible {
+  background: #174d3b;
+  color: #fff;
+}
+
+.apnora-chat-messages {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.apnora-chat-bubble {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.apnora-chat-quick button:focus-visible,
+.apnora-chat-launch:focus-visible,
+.apnora-chat-close:focus-visible {
+  outline: 3px solid #d6a64f;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .apnora-chat-panel {
+    width: calc(100vw - 24px);
+    max-width: 400px;
+    right: 12px;
+    bottom: 80px;
+  }
+
+  .apnora-chat-quick button {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+}
+
+
+/* Apnora24 cookie consent banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000;
+  width: min(520px, calc(100% - 40px));
+  padding: 20px;
+  background: #ffffff;
+  color: #26352e;
+  border: 1px solid #dce5df;
+  border-radius: 14px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-banner[hidden] {
+  display: none !important;
+}
+
+.cookie-banner strong {
+  font-size: 17px;
+}
+
+.cookie-banner p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 8px 0 14px;
+}
+
+.cookie-banner a {
+  color: #174d3b;
+  font-weight: 600;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-actions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #174d3b;
+  background: #174d3b;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cookie-actions button:last-child {
+  background: white;
+  color: #174d3b;
+}
+
+@media (max-width: 480px) {
+  .cookie-banner {
+    left: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+  }
+}
+
+
