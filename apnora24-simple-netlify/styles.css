@@ -189,13 +189,35 @@
   border-color: #1eae55;
 }
 
-@media (max-width: 520px) {
+
+@media screen and (max-width: 520px) {
   .form-actions {
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
 
   .form-actions .btn {
-    width: 100%;
+    flex: 0 0 44px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    gap: 10px !important;
+    border-radius: 25px !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-actions .btn span {
+    font-size: 16px !important;
   }
 }
+
 
